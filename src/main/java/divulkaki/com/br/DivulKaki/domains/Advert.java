@@ -26,17 +26,14 @@ public class Advert implements Serializable {
 
     @Getter
     @Setter
-    @NotEmpty
     private String title;
 
     @Getter
     @Setter
-    @NotEmpty
     private String description;
 
     @Getter
     @Setter
-    @NotEmpty
     private List<AdvertImage> advertImages;
 
     @Getter
