@@ -18,11 +18,11 @@ public class AdvertRequest {
     private List<AdvertImage> advertImages;
 
     public Advert toDomain() {
-        Advert add = new Advert();
-        add.setAdvertId(this.getAdvertId());
-        add.setTitle(this.getTitle());
-        add.setDescription(this.getDescription());
-        add.setAdvertImages(this.getAdvertImages());
-        return add;
+        Advert advert = new Advert();
+        advert.setAdvertId(this.getAdvertId());
+        advert.setTitle(this.getTitle());
+        advert.setDescription(this.getDescription());
+        advert.setAdvertImages(this.getAdvertImages());
+        return advert;
     }
 }

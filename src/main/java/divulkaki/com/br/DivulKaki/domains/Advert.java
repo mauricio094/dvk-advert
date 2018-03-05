@@ -19,6 +19,7 @@ import java.util.List;
 
 public class Advert implements Serializable {
 
+    private static final long serialVersionUID = -4470736763524823732L;
     @Getter
     @Setter
     @Id

@@ -6,6 +6,8 @@ import divulkaki.com.br.DivulKaki.gateways.mongodb.repositories.AdvertRepository
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 public class AdvertGatewayImpl implements AdvertGateway {
 
@@ -15,5 +17,11 @@ public class AdvertGatewayImpl implements AdvertGateway {
     @Override
     public Advert save(Advert advert) {
         return advertRepository.save(advert);
+    }
+
+    @Override
+    public Advert findById(String id) {
+        return Optional.ofNullable(advertRepository.findOne(id))
+                .orElse(null);
     }
 }

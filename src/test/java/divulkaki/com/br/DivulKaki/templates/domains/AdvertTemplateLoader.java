@@ -14,10 +14,10 @@ public class AdvertTemplateLoader implements TemplateLoader {
     @Override
     public void load() {
         Fixture.of(Advert.class).addTemplate(VALID.name(), new Rule() {{
-            add("advertId", random(String.class));
-            add("title", regex("[A-Z]{3}-[0-9]{3}-[0-9]{2}"));
+            add("advertId", regex("[0-9]{3}"));
+            add("title", "Anuncio de Testes");
             add("description", "Melhor fruta para se comer");
-            add("images", one(AdvertImage.class, VALID.name()));
+            add("advertImages", has(1).of(AdvertImage.class, VALID.name()));
             add("lastModifiedDate", LocalDate.now());
         }});
     }

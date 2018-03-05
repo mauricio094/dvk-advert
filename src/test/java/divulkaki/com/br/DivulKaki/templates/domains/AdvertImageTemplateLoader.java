@@ -7,7 +7,7 @@ import divulkaki.com.br.DivulKaki.domains.AdvertImage;
 
 import static divulkaki.com.br.DivulKaki.templates.FixtureFactoryCore.VALID;
 
-public class ImageTemplateLoader implements TemplateLoader{
+public class AdvertImageTemplateLoader implements TemplateLoader{
     @Override
     public void load() {
         Fixture.of(AdvertImage.class).addTemplate(VALID.name(), new Rule(){{
